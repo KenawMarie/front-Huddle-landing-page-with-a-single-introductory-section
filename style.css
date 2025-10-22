@@ -1,4 +1,6 @@
-*,*::before,*::after{
+*,
+*::before,
+*::after{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -15,7 +17,6 @@ body{
     background-color: var(--purple-700);
     color: var(--color);
     padding: 2em 2em 3em; 
-    width:100%;
 } 
 
 .hero{
@@ -31,7 +32,7 @@ body{
     flex-direction: column; 
     gap: 1.2em;
     padding: 2.5em 0.8em;
-    width: 40%;
+    width: 38%;
 }
 .hero-text h1{
     font-family: 'Poppins',sans-serif;
@@ -39,55 +40,67 @@ body{
     font-size: 2.5rem;
 }
 .hero-text p{
-    font-family: 'Open Sans',sans-serif ;
+    font-family: 'Open Sans',sans-serif ; 
 }
 button{
-    font-family: 'Open Sans',sans-serif;
+    font-family: 'Poppins',sans-serif; 
     font-size: 1rem;
     width:40%;
     padding: 1em;
     border-radius: 3em;
 }
+button:hover,
+button:focus{
+    background-color: var(--magenta-400);
+    cursor: pointer;
+    color: var(--color); 
+}
+ 
+#footer svg:hover,
+#footer svg:focus{ 
+    cursor: pointer;
+    border-color: var(--magenta-400);
+    fill: var(--magenta-400);
+}
  
 #footer{
     display: flex;
     gap: 1em;
-    justify-content: flex-end;
-    width: 100%;
+    justify-content: flex-end; 
 }
 #footer svg{
-    width:20px;
-    height:20px; 
-    fill: #fff;
-}
-#footer .img{
-    width:40px;
-    height:40px;
-    border: 1px solid whitesmoke;
+    width:2.5rem;
+    height:2.5rem; 
+    fill: var(--color); 
+    border: 1px solid var(--color);
     border-radius: 50%; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 0.5em;
 }
  
-@media screen and (max-width: 768px) {
+ 
+@media screen and (max-width: 48rem) {
     body{
         background: var(--bg-mobile);
         background-color: var(--purple-700); 
     }
-    .hero{
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
+
+    header img{
+        width:44%;
     }
+
+    .hero{
+        flex-direction: column; 
+    }
+
     .hero img{
         width: 100%;
     }
+
     .hero-text{ 
         text-align: center;
         width: 100%; 
     }
+
     button{ 
         width:80%; 
         align-self: center;
